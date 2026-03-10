@@ -10,7 +10,7 @@ def contains_seven(num: int):
   while num > 0:
     if num % 10 == 7:
       return True
-    num // 10
+    num //= 10
     return False
 
 def is_divisible_by_seven(num: int):
