@@ -3,7 +3,7 @@ def main():
 
 def print_nums():
   for num in range(0, 101):
-    if contains_seven(num) or is_divisible_by_seven(num):
+    if contains_seven(num) or num % 7 == 0:
       print(num, end=' ')
 
 def contains_seven(num: int):
@@ -11,10 +11,7 @@ def contains_seven(num: int):
     if num % 10 == 7:
       return True
     num //= 10
-    return False
-
-def is_divisible_by_seven(num: int):
-  return num % 7 == 0
+  return False
 
 if __name__ == '__main__':
   main()
