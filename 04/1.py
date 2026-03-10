@@ -1,4 +1,3 @@
-1.
 def main():
   s = 'Hello, my name is Inigo Montoya'
   print(s[:5])
@@ -8,9 +7,3 @@ def main():
 
 if __name__ == '__main__':
   main()
-
-The output is:
-Hello
-my name
-Hlo ynm sIioMnoa
-lo ynm sI
