@@ -1,12 +1,11 @@
 def main():
-  print_nums_from_one_to_six()
+  print_nums_from_zero_dot_one_to_five()
 
-def print_nums_from_one_to_six():
-  for i in range(10, 51, 10):
-    for j in range(i-9,i):
-      print(round(j*0.1,2), end=' ')
-    print(int(i*0.1))
-
+def print_nums_from_zero_dot_one_to_five():
+  for i in range(0, 50, 10):
+    for j in range(i+1, i+10):
+      print(j/10, end=' ')
+    print((i+10)//10)
 
 if __name__ == '__main__':
   main()
