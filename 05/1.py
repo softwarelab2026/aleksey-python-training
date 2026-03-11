@@ -6,8 +6,8 @@ def divide(dividend, divisor):
   else: return dividend // divisor
 
 def main():
-  print('{}*{}={}'.format(2,3,multiply(2, 3)))
-  print('{}//{}={}'.format(8,4,divide(8,4)))
+  print(f"{2}*{3}={multiply(2,3)}")
+  print(f"{8}//{4}={divide(8,4)}")
 
 if __name__ == '__main__':
   main()
