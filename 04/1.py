@@ -1,9 +1,9 @@
 def main():
-  s = 'Hello, my name is Inigo Montoya'
-  print(s[:5])
-  print(s[7:14])
-  print(s[::2])
-  print(s[2:19:2])
+  sentence = 'Hello, my name is Inigo Montoya'
+  print(sentence[:5])
+  print(sentence[7:14])
+  print(sentence[::2])
+  print(sentence[2:19:2])
 
 if __name__ == '__main__':
   main()

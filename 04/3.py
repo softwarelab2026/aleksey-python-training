@@ -26,7 +26,7 @@
 
 
 def donuts(count):
-    return 'Number of donuts: {}'.format(count if count < 10 else 'many')
+    return f"Number of donuts: {count if count < 10 else 'many'}"
 
 
 # B. both_ends
@@ -66,8 +66,7 @@ def fix_start(s):
 
 def mix_up(a, b):
     c, d = a[0:2], b[0:2]
-    c, d = d, c # swap
-    return '{} {}'.format(c+a[2:], d+b[2:])
+    return f"{d+a[2:]} {c+b[2:]}"
 
 # E. verbing
 # Given a string, if its length is at least 3,
@@ -192,3 +191,4 @@ def main():
 # Standard boilerplate to call the main() function.
 if __name__ == '__main__':
     main()
+
