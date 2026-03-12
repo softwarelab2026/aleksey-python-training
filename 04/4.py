@@ -8,8 +8,8 @@ def main():
 def list_digits(num: int) -> str:
   result = ''
   power = count_digits(num)-1
-  while power > 0:
-    result += '{}, '.format(num // 10 ** power % 10)
+  while power >= 0:
+    result += f"{num // 10 ** power % 10}, "
     power -= 1
   result += str(num % 10)
   return result
