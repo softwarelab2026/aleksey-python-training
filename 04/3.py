@@ -52,7 +52,7 @@ def both_ends(s):
 
 
 def fix_start(s):
-  return s[0]+s[1:].replace(s[0], '*')
+    return s[0]+s[1:].replace(s[0], '*')
 
 
 # D. MixUp
@@ -79,9 +79,9 @@ def mix_up(a, b):
 
 def verbing(s):
     if len(s) >= 3:
-      if s[-3:] == 'ing':
-        s+='ly'
-      else: s+='ing'
+        if s[-3:] == 'ing':
+            s+='ly'
+        else: s+='ing'
     return s
 
 
@@ -113,19 +113,20 @@ def not_bad(s):
 
 
 def front_back(a, b):
-  a_mid, b_mid = find_mid(a), find_mid(b)
-  return extract_front(a, a_mid)+extract_front(b, b_mid)+extract_back(a, a_mid)+extract_back(b, b_mid)
+    return extract_front(a)+extract_front(b)+extract_back(a)+extract_back(b)
 
-def find_mid(s: str) -> str:
-   if len(s) % 2 == 0:
-      return len(s)//2-1
-   else: return len(s)//2
+def find_mid(s: str) -> int:
+    if len(s) % 2 == 0:
+        return len(s)//2-1
+    else: return len(s)//2
 
-def extract_front(s: str, mid: int) -> str:
-  return s[:mid+1]
+def extract_front(s: str) -> str:
+    mid = find_mid(str)
+    return s[:mid+1]
 
-def extract_back(s: str, mid: int) -> str:
-  return s[mid+1:]
+def extract_back(s: str) -> str:
+    mid = find_mid(str)
+    return s[mid+1:]
 
 # Provided simple test() function used in main() to print
 # what each function returns vs. what it's supposed to return.
