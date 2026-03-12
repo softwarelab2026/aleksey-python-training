@@ -1,7 +1,7 @@
-def multiply(multiplicand, multiplier):
+def multiply(multiplicand: int, multiplier: int) -> int:
   return multiplicand*multiplier
 
-def divide(dividend, divisor):
+def divide(dividend: int, divisor: int) -> int:
   if divisor == 0: return 'illegal'
   else: return dividend // divisor
 

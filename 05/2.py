@@ -1,7 +1,8 @@
 def factorial(target_num: int) -> int:
   result = 1
-  for i in range(target_num,0,-1):
+  for i in range(1, target_num):
     result *= i
+  result *= target_num
   return result
 
 def append_beep_to_string(s: str) -> str:
