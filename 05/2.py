@@ -8,7 +8,7 @@ def factorial(target_num: int) -> int:
 def append_beep_to_string(s: str) -> str:
   return s+'beep'
 
-def mul_2nums(num1, num2):
+def mul_2nums(num1: int, num2: int) -> int:
   result = num1 * num2
   if result < 0: return 0
   else: return result
