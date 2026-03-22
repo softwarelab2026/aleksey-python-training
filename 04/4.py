@@ -6,18 +6,20 @@ def main():
 
 
 def list_digits(num: int) -> str:
-  result = ''
+  num = abs(num)
+  digits = []
   power = count_digits(num)-1
   while power >= 0:
-    result += f"{num // 10 ** power % 10}, "
+    digit = (num // (10 ** power)) % 10
+    digits.append(str(digit))
     power -= 1
-  result += str(num % 10)
-  return result
-
+  return ', '.join(digits)
 
 def count_digits(num: int):
+  num = abs(num)
+  if num == 0: return 1
   count = 0
-  while num >= 0:
+  while num > 0:
     count += 1
     num //= 10
   return count
