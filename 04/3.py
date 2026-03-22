@@ -65,8 +65,8 @@ def fix_start(s):
 
 
 def mix_up(a, b):
-    c, d = a[0:2], b[0:2]
-    return f"{d+a[2:]} {c+b[2:]}"
+    start_of_a, start_of_b = a[0:2], b[0:2]
+    return f"{start_of_b+a[2:]} {start_of_a+b[2:]}"
 
 # E. verbing
 # Given a string, if its length is at least 3,
@@ -77,13 +77,11 @@ def mix_up(a, b):
 # Return the resulting string.
 
 
-def verbing(s):
-    if len(s) >= 3:
-        if s[-3:] == 'ing':
-            s+='ly'
-        else: s+='ing'
-    return s
 
+def verbing(s):
+    if len(s) < 3: return s
+    elif s[-3:] == 'ing': return s+'ly'
+    else: return s+'ing'
 
 # F. not_bad
 # Given a string, find the first appearance of the
@@ -96,10 +94,10 @@ def verbing(s):
 
 
 def not_bad(s):
-    not_indx = s.find('not')
-    bad_indx = s.find('bad')
-    if not_indx < bad_indx:
-        s = s[:not_indx] + 'good' + s[bad_indx+3:]
+    not_index = s.find('not')
+    bad_index = s.find('bad')
+    if not_index < bad_index:
+        s = s[:not_index] + 'good' + s[bad_index+len('bad'):]
     return s
 
 
@@ -118,14 +116,15 @@ def front_back(a, b):
 def find_mid(s: str) -> int:
     if len(s) % 2 == 0:
         return len(s)//2-1
-    else: return len(s)//2
+    else:
+        return len(s)//2
 
 def extract_front(s: str) -> str:
-    mid = find_mid(str)
+    mid = find_mid(s)
     return s[:mid+1]
 
 def extract_back(s: str) -> str:
-    mid = find_mid(str)
+    mid = find_mid(s)
     return s[mid+1:]
 
 # Provided simple test() function used in main() to print
