@@ -17,7 +17,7 @@ def list_digits(num: int) -> str:
 
 def count_digits(num: int):
   count = 0
-  while num > 0:
+  while num >= 0:
     count += 1
     num //= 10
   return count
