@@ -25,6 +25,7 @@ def count_digits(num: int):
   return count
 
 def sum_digits(num: int):
+  num = abs(num)
   sum_dig = 0
   while num > 0:
     sum_dig += num % 10
